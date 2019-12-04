@@ -6,9 +6,11 @@ import { ProductController } from './products/product.controller';
 
 import { ProductModule } from './products/product.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { UserModule } from './users/user.module';
+import { UserController } from './users/user.controller';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(),ProductModule],
+  imports: [TypeOrmModule.forRoot(),ProductModule, UserModule],
   controllers: [AppController],
   providers: [AppService],
 })
