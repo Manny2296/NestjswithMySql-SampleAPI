@@ -1,3 +1,5 @@
+import { ShopModule } from './shops/shop.module';
+import { ShopService } from './shops/shop.service';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -9,8 +11,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './users/user.module';
 import { UserController } from './users/user.controller';
 
+
 @Module({
-  imports: [TypeOrmModule.forRoot(),ProductModule, UserModule],
+  imports: [TypeOrmModule.forRoot(),ProductModule, UserModule, ShopModule],
   controllers: [AppController],
   providers: [AppService],
 })
