@@ -7,4 +7,6 @@ export class Product {
 
     @Column({length:45})
     name:string
+    @Column({length:4000})
+    description:string
 }
