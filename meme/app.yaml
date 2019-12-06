@@ -14,4 +14,6 @@
 #
 # [START runtime]
 runtime: nodejs10
+beta_settings:
+  cloud_sql_instances: winged-pen-261210:europe-west1:meme 
 # [END runtime]
