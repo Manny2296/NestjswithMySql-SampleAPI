@@ -1,7 +1,7 @@
   {
       "type": "mysql",
       "host": "35.205.31.20",
-      //"port": 3306,
+     
       "username": "root",
       "password": "153420Mpb",
       "database": "meme",
