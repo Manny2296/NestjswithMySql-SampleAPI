@@ -1,4 +1,5 @@
-import { Entity,Column,PrimaryGeneratedColumn } from "typeorm";
+import { Entity,Column,PrimaryGeneratedColumn, ManyToMany, JoinTable } from "typeorm";
+import { Prestamo } from "src/prestamo/prestamo.entity";
 @Entity()
 export class User
 {
@@ -9,12 +10,28 @@ export class User
     @Column({length:45})
     surname:string;
     @Column({length:50})
-    id_Document:string
+    id_Document:string;
     @Column({length:45})
-    mail:string
+    mail:string;
     @Column({length:45})
-    password:string
+    password:string;
     @Column('int')
-    telephone:number
+    telephone:number;
+    @Column()
+    image_user: string;
+
+    @ManyToMany(type => Prestamo, {eager:true})
+    @JoinTable({
+        name: "user_prestam", // table name for the junction table of this relation
+        joinColumn: {
+            name: "user",
+            referencedColumnName: "idusuario"
+        },
+        inverseJoinColumn: {
+            name: "prestamo",
+            referencedColumnName: "idprestamo"
+        }
+    })
+    prestamos: Prestamo[];
 
 }

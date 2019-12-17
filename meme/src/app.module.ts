@@ -10,10 +10,14 @@ import { ProductModule } from './products/product.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './users/user.module';
 import { UserController } from './users/user.controller';
+import { PrestamoService } from './prestamo/prestamo.service';
+import { PrestamoController } from './prestamo/prestamo.controller';
+import { PrestamoModule } from './prestamo/prestamo.module';
+import { PaymentModule } from './payment/payment.module';
 
 
 @Module({
-  imports: [TypeOrmModule.forRoot(),ProductModule, UserModule, ShopModule],
+  imports: [TypeOrmModule.forRoot(),ProductModule, UserModule, ShopModule, PrestamoModule, PaymentModule],
   controllers: [AppController],
   providers: [AppService],
 })
