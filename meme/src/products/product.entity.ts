@@ -9,4 +9,11 @@ export class Product {
     name:string
     @Column({length:4000})
     description:string
+    @Column('int')
+    quantity: number
+    @Column('bigint')
+    price_unity: number
+    @Column('bigint')
+    total_price: number
+  
 }

@@ -14,7 +14,7 @@ export class ProductService {
     }
     async getProduct(_id:number):Promise<Product[]>{
     return await this.productRepository.find({
-        select: ["id","name","description"],
+        select: ["id","name","description","quantity","price_unity","total_price"],
         where:[{"id": _id}]
         // interesting way to do requets into a BD
     })

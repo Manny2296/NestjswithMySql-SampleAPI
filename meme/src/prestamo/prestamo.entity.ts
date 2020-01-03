@@ -4,7 +4,7 @@ import { Payment } from "src/payment/payment.entity";
 export class Prestamo {
     @PrimaryGeneratedColumn()
     idprestamo:number;
-    @Column('int')
+    @Column('bigint')
     prestamo_valor:number;
     @Column('int')
     prestamo_cuotas:number;

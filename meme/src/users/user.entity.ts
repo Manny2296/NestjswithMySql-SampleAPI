@@ -15,7 +15,7 @@ export class User
     mail:string;
     @Column({length:45})
     password:string;
-    @Column('int')
+    @Column('bigint')
     telephone:number;
     @Column()
     image_user: string;
