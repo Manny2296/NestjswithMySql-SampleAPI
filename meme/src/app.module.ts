@@ -14,10 +14,12 @@ import { PrestamoService } from './prestamo/prestamo.service';
 import { PrestamoController } from './prestamo/prestamo.controller';
 import { PrestamoModule } from './prestamo/prestamo.module';
 import { PaymentModule } from './payment/payment.module';
+import { CompraModule } from './compra/compra.module';
+
 
 
 @Module({
-  imports: [TypeOrmModule.forRoot(),ProductModule, UserModule, ShopModule, PrestamoModule, PaymentModule],
+  imports: [TypeOrmModule.forRoot(),ProductModule, UserModule, ShopModule, PrestamoModule, PaymentModule, CompraModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -1,4 +1,5 @@
-import { Entity,Column,PrimaryGeneratedColumn } from "typeorm";
+import { Compra } from './../compra/compra.entity';
+import { Entity,Column,PrimaryGeneratedColumn, ManyToOne } from "typeorm";
 @Entity()
 export class Product {
 
@@ -15,5 +16,6 @@ export class Product {
     price_unity: number
     @Column('bigint')
     total_price: number
-  
+    //@ManyToOne(type=> Compra, compra => compra.products)
+   // compra : Compra;
 }
