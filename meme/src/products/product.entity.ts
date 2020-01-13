@@ -10,6 +10,8 @@ export class Product {
     name:string
     @Column({length:4000})
     description:string
+    @Column('bigint')
+    cod_product: number
     @Column('int')
     quantity: number
     @Column('bigint')
